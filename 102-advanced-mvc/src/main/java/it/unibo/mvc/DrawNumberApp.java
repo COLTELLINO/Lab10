@@ -7,9 +7,12 @@ import java.util.List;
 /**
  */
 public final class DrawNumberApp implements DrawNumberViewObserver {
-    private static final int MIN = 0;
-    private static final int MAX = 100;
-    private static final int ATTEMPTS = 10;
+
+    static Configuration config = new Configuration();
+    
+    private static final int MIN = config.getMin();
+    private static final int MAX = config.getMax();
+    private static final int ATTEMPTS = config.getAttempts();
 
     private final DrawNumber model;
     private final List<DrawNumberView> views;
